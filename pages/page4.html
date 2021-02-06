@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation_Kit_Fallout</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/course_drag_drop.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+
+<body id="pageWrapper">
+    <style>
+    .dontDisplay,
+    .seriesOfImages
+    {
+        display: none;
+    }
+    .hideElement
+    {
+        opacity: 0;
+    }
+    .imgHolder img
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #resetScreenBtn
+    {
+        bottom: 130px;
+    }
+</style>
+
+<audio id="audio">
+    <source data-path="page3.mp3" type="audio/mpeg">
+</audio>
+<script>
+    var pageFinish = false;
+    var audioProgress = 0;
+    var audioPlayed = false;
+    var bgImage = {background: "#097296 url(./img/bg1.png) center center no-repeat",filter:"blur 5px"};
+</script>
+    <h1 class="dontDisplay">Screen Title - <span id="pageScreenName"> </span></h1>
+    <div id="transcriptTextWrapper" class="dontDisplay">
+        <div id="transcriptText">
+            <p>Here are some questions aimed at tripping up Microsoft.&nbsp; </p>
+            <p>When you’re ready to see a different competitor, tap the Next button. </p>
+        </div>
+    </div>
+    <div id="wrapperPage">
+        <div id="wrapper">
+            <div id="main" style="background-color: transparent">
+                <div class="wrap-section no-padding">
+                    <div id="bodyContainer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-7 bg-gray percentByHeight" data-desktop-height="100" data-tablet-height="100" data-mobile-height="50">
+                                    <div class="draggable-section">
+                                        <h2 class="drag-drop-page-title">Trap-Setting Questions </h2>
+                                        <p><em>Drag the question mark icon from each question to the placeholder in the trap to see which methods work and which ones don't.&nbsp;</em> </p>
+                                        <div class="draggable-table">
+                                            <div>
+                                                <div>
+                                                    <p class="large-font draggable-text">How important is it to be able to manage all your Cloud services from a single console for policy and incident management? </p>
+                                                </div>
+                                                <div class="draggable-item-wrap" data-value="1">
+                                                    <div class="drag-item draggable-item" data-audio="page4-1.mp3" data-value="1" data-title="Good Trap!" data-content="Many Cloud services have some form of built-in security, but they aren’t designed to manage incidents outside of their own application. McAfee secures all Cloud services with one platform, which also reduces the amount of skilled staff needed to manage policies and incidents."></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="draggable-table">
+                                            <div>
+                                                <div>
+                                                    <p class="large-font draggable-text">Microsoft generates a lot of false positives. Is their threat funnel based on multi-event threats or single-event anomalies? </p>
+                                                </div>
+                                                <div class="draggable-item-wrap" data-value="2">
+                                                    <div class="drag-item draggable-item" data-audio="page4-2.mp3" data-value="2" data-title="Not quite..." data-content="Instead of going on the attack, try educating the customer on the significance of a threat funnel that tracks multi-event threats, and then, ask how Microsoft handles it."></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="draggable-table">
+                                            <div>
+                                                <div>
+                                                    <p class="large-font draggable-text">Is it important to you to block users from sharing files or folders with sensitive information? </p>
+                                                    <p class="large-font draggable-text">Do you need to stop people from committing policy violations in real time? </p>
+                                                </div>
+                                                <div class="draggable-item-wrap" data-value="3">
+                                                    <div class="drag-item draggable-item" data-audio="page4-3.mp3" data-value="3" data-title="Good Trap!" data-content="Even Microsoft Cloud App Security (MCAS) cannot enforce some policy violations like OneDrive sharing of sensitive information in real time. It can take minutes to hours to enforce. Challenge the customer’s requirements to look deeper at the competitor’s weaknesses."></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-5">
+                                    <div id="drop-message" class="bg-red">
+                                        <h2 id="drop-message-notice">Heading</h2>
+                                        <p id="drop-message-text" class="large-font">Paragraph</p>
+                                        <div class="text-center"><span id="continue-btn" class="btn transparent">Continue</span></div>
+                                    </div>
+                                    <div class="droppable-wrap percentByHeight" data-desktop-height="100" data-tablet-height="100" data-mobile-height="100">
+                                        <div class="drop-item"><img src="../img/img-cage.svg"></div>
+                                        <div class="antivirus-logo"><img src="../img/img-ms.svg"></div>
+                                    </div>
+                                    <div id="drag-drop-btn"><span class="btn red reset-drag-btn">Reset</span><span class="btn red pull-right next-page">Next</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bg-image" class="dark-bg"></div>
+        </div>
+        <div class="container-fluid" id="transcript">
+            <div class="row">
+                <div class="col-lg-6 col-lg-push-3 col-md-6 col-md-push-3 col-sm-6 col-sm-push-3" id="transcriptBox">
+                    <div id="transcriptCloseBtn"><span>X </span></div>
+                    <div id="transcriptShow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.main.js"></script>
+    <script src="../js/glossary.js"></script>
+    <script src="../js/wrapper.js"></script>
+    <script src="../js/custom_code.js"></script>
+    <script src="../js/init.js"></script>
+    <script src="../js/course_drag_drop.js"></script>
+</body>
+
+</html>

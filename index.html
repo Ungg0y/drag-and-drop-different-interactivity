@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Template</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/course_drag_drop.css">
+    <link rel="stylesheet" href="css/course.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+        <!--<script src="./lms/APIConstants.js"></script>
+    <script src="./lms/Configuration.js"></script>
+    <script src="./lms/API.js"></script>
+    <script src="./lms/NONEFunctions.js"></script>
+    <script src="./lms/SCORMDiscovery.js"></script>
+    <script src="./lms/UtilityFunctions.js"></script>
+    <script src="./lms/SCORM2004Functions.js"></script>-->
+<style>
+    html,body
+    {
+        overflow: hidden;
+    }
+    .dontDisplay
+    {
+        display: none;
+    }
+</style>
+<audio id="audio">
+    <source data-path="" type="audio/mpeg">
+</audio>
+    <header id="header-static">
+        <div id="audioIconBtn" class="hamburger-btn"><img src="img/essentials/icons/audio.svg"></div>
+        <a href="#" class="hamburger-btn modal-toggle" data-toggle="modal" data-target="#nav-overlay"> <span> </span><span> </span><span> </span></a>
+        <div id="logo"><img src="img/essentials/logo/logo.svg"></div>
+    </header>
+    <div id="btnControls" class="dontDisplay">
+        <div id="closedCaptionBtn" class="whiteText"><i class="glyphicon glyphicon-subtitles"></i></div>
+        <div id="playBtn" class="whiteText"><i class="glyphicon glyphicon-play"></i></div>
+        <div class="hidden whiteText" id="pauseBtn"><i class="glyphicon glyphicon-pause"></i></div>
+        <div id="muteBtn" class="whiteText"><i class="glyphicon glyphicon-volume-up"></i></div>
+        <div class="hidden whiteText" id="unmuteBtn"><i class="glyphicon glyphicon-volume-off"></i></div>
+        <div id="pageProgress" class="whiteText"><span id="completePercentage">0% </span>
+            <p id="pageComplete">Complete </p>
+        </div>
+        <div id="resetScreenBtn" class="whiteText"><i class="glyphicon glyphicon-refresh"></i></div>
+    </div>
+    <div id="pageContent">
+        <h1 class="dontDisplay">Indicate series of pages </h1>
+        <p id="pageNames" class="dontDisplay" style="width: 90%; font-size: 1.5em;">page2, page1, page4, page5, page6, page7, quiz1, quiz2, quiz3, quiz4, quiz5, lastPage </p>
+        <h1 class="dontDisplay">Indicate series of quiz pages </h1>
+        <p id="quizPages" class="dontDisplay" style="width: 90%; font-size: 1.5em">quiz1, quiz2 , quiz3, quiz4, quiz5, lastPage </p>
+    </div>
+    <div id="progressBarWrapper">
+        <div id="progressBarContainer">
+            <div id="progressBar"></div>
+        </div>
+    </div>
+    <div id="navFooter" class="wrap-section">
+        <div class="container-fluid" id="bottomTxt" style="opacity:0"><span class="small-title">Provided by Sales Learning and Development </span></div>
+        <div id="pageIndicator"></div>
+        <div id="wrapperSubmitBtn"><span class="btn red" style="position: relative; top: 2px">Submit</span></div>
+        <div id="prevNextBtn">
+            <div id="nextPage"><i class="glyphicon glyphicon-menu-right"></i></div>
+            <div id="prevPage"><i class="glyphicon glyphicon-menu-left"></i></div>
+        </div>
+    </div>
+    <div id="wrapperBG"></div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="nav-overlay" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="display: none"><span aria-hidden="true">×</span></button>
+                    <div class="close" data-dismiss="modal" aria-label="Close"><span> </span><span> </span><span> </span></div>
+                    <a href="http://clddevapp0124.corpzone.internalzone.com:90/frog/RESPONSIVE-COMPS/NEW-McAFEE/style-guide.html#" class="logo"> <img src="img/essentials/logo/logo-white.svg" alt="McAfee"></a><a href="http://clddevapp0124.corpzone.internalzone.com:90/frog/RESPONSIVE-COMPS/NEW-McAFEE/style-guide.html#" class="class" data-dismiss="modal"><span> </span><span> </span><span> </span></a></div>
+                <div
+                class="modal-body">
+                    <div id="menu2" class="nav-overlay">
+                        <div class="container hidden medium">
+                            <div class="row">
+                                <div>
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="active"> <a href="#menu" role="tab" data-toggle="tab">Menu </a></li>
+                                        <li> <a href="#resources" role="tab" data-toggle="tab">Resources </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-body">
+                            <div class="container medium">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="tab-content">
+                                            <div id="menu" class="tab-pane fade in active" role="tabpanel">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 same-height-left" id="mainSize" style="margin-top:-40px;">
+                                                        <div style="padding: 20px 0;">
+                                                            <h1 class="biggest-font xs-text-center" style="margin-bottom:0;color:#fff;margin-top:-20px;">Main Menu </h1>
+                                                            <p class="xs-text-center large-font">Use the menu on the right to navigate to each section. </p><img class="img-responsive elementCenter" src="img/essentials/icons/icn_computer.svg" id="computerIcon"></div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 same-height-right setSameHeight text-center" data-base="#mainSize">
+                                                        <div class="aTable" style="height: 100%">
+                                                            <div class="aTR" style="height: 100%">
+                                                                <div class="aTD" style="height: 100%; vertical-align: middle">
+                                                                    <div class="mainMenuLink btn red" data-page="page2"><span>Introduction </span></div>
+                                                                    <div class="mainMenuLink btn red" data-page="page4"><span>Activity: Microsoft</span></div>
+                                                                    <div class="mainMenuLink btn red" data-page="page5"><span>Activity: Netskope</span></div>
+                                                                    <div class="mainMenuLink btn red" data-page="page6"><span>Activity: General</span></div>
+                                                                    <div class="mainMenuLink btn red" data-page="page7"><span>Summary </span></div>
+                                                                    <div class="mainMenuLink btn red" data-page="quiz1"><span>Exam</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="resources" class="tab-pane fade" role="tabpanel">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h4 style="margin-bottom:15px;color:rgb(255,255,255);">To learn more about McAfee Product and Solutions, Internal Sales, access the <strong>Sales Portal</strong>, and for Partners, access the <strong>Partner Portal. </strong>Click each image for additional resources. </h4></div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-4 text-center" style="padding-bottom: 30px;">
+                                                        <h2 class="large-font" style="margin-bottom: 15px;">Sales Portal</h2>
+                                                        <a target="_blank" class="mcafeePDFresources" data-pdf="Sales%20Portal.pdf"><img class="img-responsive elementCenter" src="img/essentials/elem/resources_img_1.png"></a>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-4 text-center" style="padding-bottom: 30px;">
+                                                        <h2 class="large-font" style="margin-bottom: 15px;">Partner Portal</h2>
+                                                        <a target="_blank" class="mcafeePDFresources" data-pdf="Partner%20Portal.pdf"><img class="img-responsive elementCenter" src="img/essentials/elem/resources_img_2.png"></a>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 hidden text-center" style="padding-bottom: 30px;">
+                                                        <h2 class="large-font" style="margin-bottom: 15px;">INTEGRATED </h2>
+                                                        <a href="https://sales.mcafee.com/resources/sales-playbook/sp-siem.pdf" target="_blank"> <img class="img-responsive elementCenter" src="img/essentials/elem/resources_img_3.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="bottomCopyright">
+                                                <h2 class="large-font" style="margin:5px;margin-bottom:15px;padding-top:11px;">Brought to you by Global Sales Enablement. </h2></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="vidModal" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="display: none"><span aria-hidden="true">×</span></button>
+                    <div class="close" data-dismiss="modal" aria-label="Close"><span> </span><span> </span><span> </span></div>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div id="vidPlayer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="pdfModal" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="display: none"><span aria-hidden="true">×</span></button>
+                    <div class="close" data-dismiss="modal" aria-label="Close"><span> </span><span> </span><span> </span></div>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div id="pdfIframeWrapper">
+                                    <iframe id="pdfIframe" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><a href="#" target="_blank" id="viewPDF" class="btn red">View</a><a href="#" id="downloadPDF" class="btn red">Download</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="audioModal" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="display: none"><span aria-hidden="true">×</span></button>
+                    <div class="close" data-dismiss="modal" aria-label="Close"><span> </span><span> </span><span> </span></div>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div style="display: block; position: relative; max-width: 100%;">
+                                    <div style="padding-top: 15%; text-align: center;">
+                                        <audio id="audioPlayer" controls>
+    <source type="audio/mpeg">
+</audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="imgModal" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="display: none"><span aria-hidden="true">×</span></button>
+                    <div class="close" data-dismiss="modal" aria-label="Close"><span> </span><span> </span><span> </span></div>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 text-center"><img class="img-responsive elementCenter" id="enlargeImg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/jquery.main.js"></script>
+    <script src="js/glossary.js"></script>
+    <script src="js/wrapper.js"></script>
+    <script src="js/custom_code.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/course_drag_drop.js"></script>
+</body>
+
+</html>

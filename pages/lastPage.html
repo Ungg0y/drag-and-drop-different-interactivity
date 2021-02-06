@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation_Kit_Fallout</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/course_drag_drop.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+
+<body id="pageWrapper" class="bg-light-gray">
+    <style>
+    .dontDisplay,
+    .seriesOfImages
+    {
+        display: none;
+    }
+    .hideElement
+    {
+        opacity: 0;
+    }
+    .imgHolder img
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    [class^="col-"]
+    {
+        margin: 5px 0;
+    }
+</style>
+
+<audio id="audio">
+    <source data-path="blank.mp3" type="audio/mpeg">
+</audio>
+<script>
+    var pageFinish = true;
+    var audioProgress = 0;
+    var audioPlayed = true;
+    var bgImage = {background: "#097296 url(./img/bg1.png) center center no-repeat",filter:"none"};
+</script>
+    <h1 class="dontDisplay">Screen Title -&nbsp;Course Finish</h1>
+    <div id="transcriptTextWrapper" class="dontDisplay">
+        <div id="transcriptText"></div>
+    </div>
+    <div id="wrapperPage">
+        <div id="wrapper">
+            <div id="main">
+                <div class="wrap-section no-padding bg-light-gray">
+                    <div class="container-fluid percentByHeight" data-height="100">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="lastPageHeading">
+                                    <h1 class="biggest-font" style="margin-bottom: 0">Quiz Results </h1>
+                                    <div class="redUnderlineBar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div id="infoResult">
+                                    <p class="biggest-font">Accuracy: <span id="accuracy" style="float:right">0 </span></p>
+                                    <div class="greenUnderlineBar"></div>
+                                    <p class="biggest-font">Attempts: <span id="attempts" style="float:right">1 </span></p>
+                                    <div class="greenUnderlineBar"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-lg-push-2 col-md-6 col-md-push-2 col-sm-6">
+                                <div id="notification" class="redListBullet large-font">
+                                    <ul>
+                                        <li id="failNotification" class="dontDisplay">Sorry, you did not pass the quiz. If you do not want to retake the quiz at this time, close the class by selecting the "close" button and return to it at a later time. You will not be able to move on to the next
+                                            class or module until you have passed this quiz. </li>
+                                        <li id="passNotification" class="dontDisplay">You passed the quiz. To close this class, select the "close" button. This will bring you back to your curriculum so you can launch your next class. </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="bottomButton">
+                            <div class="col-lg-6 col-lg-push-3 col-md-6 col-md-push-3 col-sm-6 col-sm-push-3 text-center" style="padding-top: 30px">
+                                <div id="continueReview">
+                                    <div id="retakeBtn" class="large-font dontDisplay btn red">
+                                        <p style="margin-bottom: 0">Retake </p>
+                                    </div>
+                                    <div id="reviewBtn" class="large-font dontDisplay btn red">
+                                        <p style="margin-bottom: 0">Review </p>
+                                    </div>
+                                    <div id="closeBtn" class="large-font btn red">
+                                        <p style="margin-bottom: 0">Close </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="bottomCopyright">
+                            <div class="col-lg-8 col-lg-push-2 col-md-8 col-md-push-2 col-sm-8 col-sm-push-3" style="padding-top: 30px">
+                                <p class="text-left">McAfee and the McAfee logo are trademarks or registered trademarks of McAfee LLC&nbsp;or its subsidiaries in the U.S. and/or other countries.&nbsp;Other names and brands may be claimed as the property of others. Copyright
+                                    © 2017 McAfee&nbsp;LLC. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="transcript">
+            <div class="row">
+                <div class="col-lg-6 col-lg-push-3 col-md-6 col-md-push-3 col-sm-6 col-sm-push-3" id="transcriptBox">
+                    <div id="transcriptCloseBtn"><span>X </span></div>
+                    <div id="transcriptShow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.main.js"></script>
+    <script src="../js/glossary.js"></script>
+    <script src="../js/wrapper.js"></script>
+    <script src="../js/custom_code.js"></script>
+    <script src="../js/init.js"></script>
+    <script src="../js/course_drag_drop.js"></script>
+</body>
+
+</html>

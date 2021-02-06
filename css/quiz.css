@@ -1,0 +1,157 @@
+.mapQuiz .quizTitle {
+  margin-bottom:0;
+}
+
+.mapQuiz #quizQuestion {
+  padding:25px;
+  width:100%;
+}
+
+.mapQuiz #textContent {
+  margin-bottom:0;
+}
+
+.mapQuiz #quizMechanics {
+  margin-bottom:30px;
+}
+
+.mapQuiz #quizContent .radioBtn > * {
+  vertical-align:middle;
+}
+
+.mapQuiz #quizContent input[type="radio"] + label:before {
+  display:none;
+}
+
+.mapQuiz .checkXmarkIcon {
+  padding:5px 7px;
+}
+
+.mapQuiz .iconRadioLabel {
+  background-color:#E6E7E8;
+}
+
+.mapQuiz .iconRadioLabel > * {
+  display:inline;
+}
+
+.mapQuiz .iconRadioLabelMiddle {
+  font-size:2.5em;
+  font-weight:bold;
+}
+
+.mapQuiz #quizContent .radioBtn > div {
+  padding:30px 30px 30px 20px;
+}
+
+.mapQuiz #quizContent .radioBtn > div:hover {
+  background-color:#B1BABF;
+}
+
+.mapQuiz #quizContent input[type="radio"] + label {
+  padding:0;
+}
+
+.mapQuiz #quizCounter {
+  margin:0 auto;
+  padding:0px 50px;
+  display:table;
+  font-size:10em;
+  border:5px solid #C01818;
+  position:relative;
+}
+
+.mapQuiz #quizCounterNumber {
+  margin-bottom:0;
+}
+
+.mapQuiz #quizTimeIsUp {
+  color:#C01818;
+  position:relative;
+  display:none;
+}
+
+@media (min-width:1200px) {
+  .mapQuiz #quizContent .radioBtn > * {
+    display:inline-table;
+  }
+}
+
+@media (min-width:1200px) {
+  .mapQuiz #quizContent .radioBtn > div {
+    margin:50px 0;
+  }
+}
+
+@media (min-width:1200px) {
+  .mapQuiz .iconRadioLabelMiddle {
+    margin:20px 50px;
+  }
+}
+
+@media (max-width:1199px) {
+  .mapQuiz #quizContent .radioBtn > * {
+    display:inline-table;
+  }
+}
+
+@media (max-width:1199px) {
+  .mapQuiz #quizContent .radioBtn > div {
+    margin:50px 0;
+  }
+}
+
+@media (max-width:1199px) {
+  .mapQuiz .iconRadioLabelMiddle {
+    margin:20px 50px;
+  }
+}
+
+@media (max-width:1024px) {
+  .mapQuiz #quizContent .radioBtn > * {
+    display:inline-table;
+  }
+}
+
+@media (max-width:1024px) {
+  .mapQuiz .iconRadioLabelMiddle {
+    margin:20px 50px;
+  }
+}
+
+@media (max-width:991px) {
+  .mapQuiz #quizContent .radioBtn > * {
+    display:inline-table;
+  }
+}
+
+@media (max-width:991px) {
+  .mapQuiz #quizContent .radioBtn > div {
+    margin:50px 0;
+  }
+}
+
+@media (max-width:991px) {
+  .mapQuiz .iconRadioLabelMiddle {
+    margin:20px 50px;
+  }
+}
+
+@media (max-width:767px) {
+  .mapQuiz #quizContent .radioBtn > * {
+    display:block;
+  }
+}
+
+@media (max-width:767px) {
+  .mapQuiz #quizContent .radioBtn > div {
+    margin:20px 0;
+  }
+}
+
+@media (max-width:767px) {
+  .mapQuiz .iconRadioLabelMiddle {
+    margin:0;
+  }
+}
+

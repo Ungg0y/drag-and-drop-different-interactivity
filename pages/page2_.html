@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation_Kit_Fallout</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/course_drag_drop.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+
+<body id="pageWrapper">
+    <style>
+    .dontDisplay,
+    .seriesOfImages
+    {
+        display: none;
+    }
+    .hideElement
+    {
+        opacity: 0;
+    }
+    .imgHolder img
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #resetScreenBtn
+    {
+        bottom: 130px;
+    }
+</style>
+
+<audio id="audio">
+    <source data-path="page2.mp3" type="audio/mpeg">
+</audio>
+<script>
+    var pageFinish = false;
+    var audioProgress = 0;
+    var audioPlayed = false;
+    var bgImage = {background: "#097296 url(./img/bg1.png) center center no-repeat",filter:"blur 5px"};
+</script>
+    <h1 class="dontDisplay">Screen Title - <span id="pageScreenName"> </span></h1>
+    <div id="transcriptTextWrapper" class="dontDisplay">
+        <div id="transcriptText">
+            <p>This course focuses on trap-setting questions, which are open-ended, two-sided questions that&nbsp;use McAfee defensible differentiators to satisfy the client’s required capabilities and to encourage the customer to perform due-diligence research
+                to discover just what the competitor can or cannot do.&nbsp; </p>
+            <p>One goal of a trap-setting question is to make the customer&nbsp;realize the&nbsp;<strong><em>competitor</em></strong> <strong><em>cannot </em></strong>do what&nbsp;<strong><em>McAfee can.</em></strong> While they correspond to&nbsp;discovery
+                questions, trap-setting questions are unique, because they do what their name suggests, set traps for the competition. A good&nbsp;trap-setting question will draw out the&nbsp;customer value delivered by the&nbsp;defensible differentiators.
+                </p>
+            <p>Remember, <strong>defensible differentiators</strong> answer a&nbsp;client’s <strong>why you</strong> or&nbsp;<strong>so what</strong> questions. They show how McAfee is either: </p>
+            <div class="redListBullet">
+                <ul>
+                    <li><strong>Unique,</strong> since we have it and no one else does </li>
+                    <li><strong>Comparative,</strong> in that we have the best version of it and while others&nbsp;may have it, we’re better in a meaningful way, or </li>
+                    <li><strong>Holistic</strong>, meaning we have a solution for the&nbsp;client’s entire table of concerns</li>
+                </ul>
+            </div>
+            <p>These are the points that differentiate&nbsp;<span style="color:#C01818;">M</span>VISION Cloud from the competition. Defensibility comes into play when&nbsp;a client asks, “Says who?” They want proof, and in this way, defensibility is&nbsp;like
+                a proof point for the differentiators themselves. </p>
+            <p>This may seem overly complicated, since it is&nbsp;easy to directly attack the competition, but keep in mind a client may not appreciate an attack on a competitor they like. In fact, directly saying that a chosen vendor is a bad choice may
+                make the client feel&nbsp;like <strong><em>their </em></strong>intelligence is being indirectly attacked. Instead,&nbsp;a trap-setting question encourages the&nbsp;client to&nbsp;think, research, and conclude&nbsp;a favorite competitor&nbsp;maybe
+                isn’t as great as first thought. </p>
+            <p>On the next page, you’ll see a few examples of Trap Setting Questions. If you’re guessing the correct answers, we encourage you to experiment and look at the different options. Click next to begin the activity. </p>
+        </div>
+    </div>
+    <div id="wrapperPage">
+        <div id="wrapper">
+            <div id="main">
+                <div class="wrap-section no-padding">
+                    <div id="headerContainer"></div>
+                    <div id="bodyContainer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div><img src="../img/ani_3_1.gif" class="img-responsive hideElement addAnimation element-center imgContainer" data-animation="fadeIn" data-timing="0.25" data-default="../img/page2-1.gif">
+                                        <div class="seriesOfImages"><img src="../img/ani_3_2.gif" class="img-responsive hideElement addAnimation element-center" data-animation="fadeIn" data-timing="4"><img src="../img/ani_3_3.gif" class="img-responsive hideElement addAnimation element-center"
+                                            data-animation="" data-timing="5"><img src="../img/ani_3_4.gif" class="img-responsive hideElement addAnimation element-center" data-animation="" data-timing="21"><img src="../img/ani_3_5.gif" class="img-responsive hideElement addAnimation element-center"
+                                            data-animation="" data-timing="51"><img src="../img/ani_3_6.gif" class="img-responsive hideElement addAnimation element-center" data-animation="" data-timing="54"><img src="../img/ani_3_7.gif" class="img-responsive hideElement addAnimation element-center"
+                                            data-animation="" data-timing="57"><img src="../img/ani_3_8.gif" class="img-responsive hideElement addAnimation element-center" data-animation="" data-timing="65"><img src="../img/ani_3_9.gif" class="img-responsive hideElement addAnimation element-center"
+                                            data-animation="" data-timing="95"><img src="../img/ani_3_10.gif" class="img-responsive hideElement addAnimation element-center" data-animation="" data-timing="105"><img src="../img/ani_3_11.gif" class="img-responsive hideElement addAnimation element-center"
+                                            data-animation="" data-timing="115"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <div class="dontDisplay next-fade-in" data-timing="129"><span class="btn red next-page">Next</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="transcript">
+            <div class="row">
+                <div class="col-lg-6 col-lg-push-3 col-md-6 col-md-push-3 col-sm-6 col-sm-push-3" id="transcriptBox">
+                    <div id="transcriptCloseBtn"><span>X </span></div>
+                    <div id="transcriptShow"></div>
+                </div>
+            </div>
+        </div>
+        <div id="bg-image" class="dark-bg"></div>
+    </div><span style="color:#C01818;">M</span>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.main.js"></script>
+    <script src="../js/glossary.js"></script>
+    <script src="../js/wrapper.js"></script>
+    <script src="../js/custom_code.js"></script>
+    <script src="../js/init.js"></script>
+    <script src="../js/course_drag_drop.js"></script>
+</body>
+
+</html>

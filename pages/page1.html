@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitledfdaf</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="stylesheet" href="../css/alternative-template.css">
+</head>
+
+<body id="pageWrapper" class="bg-texture">
+    <style>
+    .dontDisplay,
+    .seriesOfImages
+    {
+        display: none;
+    }
+    .hideElement
+    {
+        opacity: 0;
+    }
+    .imgHolder img
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #resetScreenBtn
+    {
+        bottom: 130px;
+    }
+</style>
+
+<audio id="audio">
+    <source data-path="blank.mp3" type="audio/mpeg">
+</audio>
+<script>
+    var pageFinish = false;
+    var audioProgress = 0;
+    var audioPlayed = false;
+    var bgImage = {background: "#097296 url(./img/bg1.png) center center no-repeat",filter:"blur 5px"};
+</script>
+    <h1 class="dontDisplay">Screen Title - <span id="pageScreenName"> </span></h1>
+    <div id="transcriptTextWrapper" class="dontDisplay">
+        <div id="transcriptText">
+            <p>Lorem ipsum dolor sit amet, egestas urna fusce iaculis, tempus vel, ac et faucibus posuere commodo tristique, mi ac nibh cras tortor. Libero velit faucibus, integer venenatis et blandit nibh scelerisque quam, in feugiat leo et placerat. Sodales
+                vestibulum vestibulum, a diam orci dolor et, nam hac pharetra tortor lorem, id nam suspendisse elit donec massa libero, risus rutrum arcu tellus laoreet eu. Etiam lorem. In pede ac posuere aliquam justo, nobis mauris nibh. </p>
+        </div>
+    </div>
+    <div id="wrapperPage">
+        <div id="wrapper">
+            <div id="main">
+                <div class="container">
+                    <div class="row">
+                        <div class="flex-container flex-container-align-center element-position-relative col-md-push-6 col-md-6 col-sm-6 col-sm-push-6 percentByHeight" data-desktop-height="100" data-tablet-height="100">
+                            <div class="min-padding element-center">
+                                <img class="img-responsive percentByHeight" src="../img/essentials/bg/cover_logo_bg.svg" id="coverBGLogo" data-desktop-height="95">
+                            </div>
+                        </div>
+                        <div class="flex-container flex-container-align-center element-position-relative col-md-pull-6 col-md-6 col-sm-6 col-sm-pull-6 percentByHeight" data-desktop-height="100" data-tablet-height="100">
+                            <div class="min-padding xs-element-center">
+                                <h1>This is Our New Template!</h1>
+                                <hr id="coverHR" class="hrWhite">
+                                <h3>The quick brown fox jumps over the lazy dog</h3>
+                                <p style="position: absolute; bottom: 0">The Quick Brown Fox</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="transcript">
+            <div class="row">
+                <div class="col-lg-6 col-lg-push-3 col-md-6 col-md-push-3 col-sm-6 col-sm-push-3" id="transcriptBox">
+                    <div id="transcriptCloseBtn"><span>X </span></div>
+                    <div id="transcriptShow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.main.js"></script>
+    <script src="../js/glossary.js"></script>
+    <script src="../js/wrapper.js"></script>
+    <script src="../js/custom-code.js"></script>
+    <script src="../js/init.js"></script>
+</body>
+
+</html>

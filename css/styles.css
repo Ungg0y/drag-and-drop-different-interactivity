@@ -1,0 +1,87 @@
+.video-player-img {
+  margin:20px;
+  width:50%;
+  height:auto;
+  cursor:pointer;
+}
+
+@media (max-width:767px) {
+  .video-player-img {
+    width:100%;
+  }
+}
+
+.videoWrapper {
+  margin-bottom:20px;
+  display:inline-table;
+  position:relative;
+  margin:0 auto;
+  width:640px;
+}
+
+@media (max-width:767px) {
+  .videoWrapper {
+    width:100%;
+  }
+}
+
+.vjs-playlist {
+  display:inline-table;
+  vertical-align:top;
+}
+
+.compareBtn {
+  margin:10px 0;
+  width:auto;
+  height:50px;
+  display:block;
+  position:relative;
+  cursor:pointer;
+}
+
+#show-result-wrap {
+  position:fixed;
+  z-index:5;
+  width:100%;
+  display:none;
+  top:50%;
+  width:100%;
+}
+
+#show-result-box {
+  margin:0 auto 10px;
+  padding:10px;
+  background-color:rgba(255,255,255,1);
+  border-radius:5px;
+  color:#555;
+  height:100px;
+  display:table;
+  border:2px solid #E6E7E8;
+  width:300px;
+  position:relative;
+}
+
+#show-result-close-btn {
+  padding:5px 10px;
+  position:absolute;
+  top:0;
+  right:0;
+  color:#fff;
+  background-color:#75160D;
+  cursor:pointer;
+  border-radius:0 5px 0 0;
+}
+
+#show-result {
+  margin-top:25px;
+  max-height:250px;
+  overflow:auto;
+  font-size:1.25em;
+}
+
+#show-result-wrap .row {
+  position:absolute;
+  bottom:0px;
+  width:100%;
+}
+
